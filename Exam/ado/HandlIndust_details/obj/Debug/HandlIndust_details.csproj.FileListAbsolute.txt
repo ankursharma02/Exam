@@ -1,0 +1,7 @@
+E:\Exam\ado\HandlIndust_details\bin\Debug\HandlIndust_details.exe.config
+E:\Exam\ado\HandlIndust_details\bin\Debug\HandlIndust_details.exe
+E:\Exam\ado\HandlIndust_details\bin\Debug\HandlIndust_details.pdb
+E:\Exam\ado\HandlIndust_details\obj\Debug\HandlIndust_details.csprojAssemblyReference.cache
+E:\Exam\ado\HandlIndust_details\obj\Debug\HandlIndust_details.csproj.CoreCompileInputs.cache
+E:\Exam\ado\HandlIndust_details\obj\Debug\HandlIndust_details.exe
+E:\Exam\ado\HandlIndust_details\obj\Debug\HandlIndust_details.pdb

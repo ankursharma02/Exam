@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+input[type=text],input[type=password],input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+</style>
+</head>
+<body background="img101.png" item-width="5px" item-height="2px">
+<center>
+<h1 style="color: blue">Student Information </h1></center>
+<div class="container">
+  <form action="Homepage.html" >
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <span id="fname_err"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <span id="lname_err"></span>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="Age">Age</label>
+        </div>
+        <div class="col-75">
+          <input type="number" id="Age" name="Age" placeholder="Your Age..">
+          <span id="Age_err"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="Mobile Number">Mobile Number</label>
+        </div>
+        <div class="col-75">
+          <input type="number" id="mob_num" name="Mobile" placeholder="Your Mobile..">
+          <span id="mob_num_err"></span>
+        </div>
+      </div>
+ 
+      <div class="row">
+        <div class="col-25">
+          <label for="Email">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="email" name="Email" placeholder="Your Email..">
+          <span id="email_err"></span>
+        </div>
+      </div>
+ 
+      <div class="row">
+        <div class="col-25">
+          <label for="Password">Password</label>
+        </div>
+        <div class="col-75">
+          <input type="password" id="pwd" name="Password" placeholder="Your Password..">
+          <span id="pwd_err"></span>
+        </div>
+      </div>
+ 
+
+       <div class="row">
+      <input type="submit" value="Submit" onclick="return validateform()">
+    </div>
+  </form>
+</div>
+<script type="text/javascript">
+    function validateform() {
+
+       
+    var fname = document.getElementById('fname').value;
+    var lname = document.getElementById('lname').value;
+    var age = document.getElementById('Age').value;
+    var email = document.getElementById('email').value;
+    var Pwd = document.getElementById('pwd').value;
+    var mob_num = document.getElementById('mob_num').value;
+ //  document.writeln(Pwd);
+        var usercheck = /^[A-Za-z.]{3,30}$/;
+         var passwordcheck =/^(?=.*\d{1})(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,16}$/;
+            var emailcheck = /^[A-Za-z_]{3,}@[A-Za-z]{5,}[.]{1}[A-Za-z.]{2,6}$/;
+            var mobilecheck = /^[789][0-9]{9}$/;
+        
+       
+       
+       
+        if (!usercheck.test(fname))
+        {
+            document.getElementById('fname_err').innerHTML = "** First Name is Invalid";
+            return false;
+        }
+        if (!usercheck.test(lname))
+        {
+            document.getElementById('lname_err').innerHTML = "** Last Name is Invalid";
+            return false;
+        }
+        if (age==""||age<3)
+        {
+            document.getElementById('Age_err').innerHTML = "Age is Invalid";
+            return false;
+        }
+        if (!mobilecheck.test(mob_num))
+        {
+            document.getElementById('mob_num_err').innerHTML = "** Incorrect mobile Number";
+            return false;
+        }
+        if (!emailcheck.test(email))
+        {
+            document.getElementById('email_err').innerHTML = "** Incorrect Email Format";
+            return false;
+        }
+         if (!passwordcheck.test(Pwd))
+        {
+            document.getElementById('pwd_err').innerHTML = "** Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character:";
+            return false;
+        }
+       
+       
+
+        localStorage.setItem("FirstName", fname);
+        localStorage.setItem("LastName", lname);
+        localStorage.setItem("Age", age);
+        localStorage.setItem("Mobile",mob_num);
+
+        localStorage.setItem("Email", email);
+        localStorage.setItem("Password", Pwd);
+        return true;
+    }
+</script>
+</body>
+</html>

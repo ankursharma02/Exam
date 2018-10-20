@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script>
+
+        // Called on body's `onload` event
+        function DataDisplay()
+        {
+            // Retrieving the text input's value which was stored into localStorage
+            var firstname = localStorage.getItem("FirstName");
+            var lastname = localStorage.getItem("LastName");
+            var age = localStorage.getItem("Age");
+            var mob_num = localStorage.getItem("Mobile");
+            var Email = localStorage.getItem("Email");
+            var Password = localStorage.getItem("Password");
+		
+            // Writing the value in the document
+            document.write("First Name = " + firstname + "<br/>");
+            document.write("Last Name = " + lastname + "<br/>");
+            document.write("Email = " + Email + "<br/>");
+            document.write("Password = " + Password + "<br/>");
+			document.write("Age " + age+"<br/>");
+            document.write("Mobile No.  " +mob_num+"<br/>");
+        }
+
+    </script>
+
+</head>
+
+    <body onload="DataDisplay();">
+
+    </body>
+</html>

@@ -1,0 +1,7 @@
+E:\Exam\Net_pro\Client\bin\Debug\Client.exe.config
+E:\Exam\Net_pro\Client\bin\Debug\Client.exe
+E:\Exam\Net_pro\Client\bin\Debug\Client.pdb
+E:\Exam\Net_pro\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+E:\Exam\Net_pro\Client\obj\Debug\Client.exe
+E:\Exam\Net_pro\Client\obj\Debug\Client.pdb
+E:\Exam\Net_pro\Client\obj\Debug\Client.csprojAssemblyReference.cache

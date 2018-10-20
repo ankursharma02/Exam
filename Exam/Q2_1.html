@@ -1,0 +1,48 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+      
+    </body>
+    <script src="https://unpkg.com/@reactivex/rxjs@5.3.0/dist/global/Rx.js"></script>
+    <script>
+        var observable=Rx.Observable.interval(1000);
+       
+       observable
+       .filter(value=> {
+           
+           //value%2==0;
+           if(value<2)
+           return false;
+           if(value ==2)
+           return true;
+           for(var v=2;v<=value/2;v++)
+           {
+               if(value%v==0)
+               return false;
+           }
+           if(value>100)
+           {
+             return false;
+           }
+
+           return true;
+           })
+        .subscribe({
+            next:function(value){
+                console.log(value);
+            },
+            complete:function(){
+                console.log("Complete");
+            },
+            error:function(error){
+                console.log('error '+error);
+
+            }            
+            
+        });
+    
+   
+    </script>
+</html> 

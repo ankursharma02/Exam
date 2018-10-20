@@ -1,0 +1,31 @@
+<html>
+<body>
+<form>
+   
+</form>
+
+</body>
+<script src="Student_json.json"></script>
+<script>
+
+    var mydata=JSON.parse(data);
+   
+        document.writeln("<table>");
+        
+    for(var i=0;i<mydata.length;i++)
+    {
+        
+    document.writeln("<td>");
+    document.writeln("<tr>");
+    document.writeln("Name:");
+    document.writeln("</tr>");
+    document.writeln("<tr>");
+    document.writeln(mydata[i].name);
+    document.writeln("</tr>");
+    document.writeln("\n");
+    document.writeln("</td> <br/>");
+	}
+	 document.writeln("</table>");
+    
+</script>
+</html>

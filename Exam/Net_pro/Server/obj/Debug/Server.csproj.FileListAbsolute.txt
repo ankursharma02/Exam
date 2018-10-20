@@ -1,0 +1,7 @@
+E:\Exam\Net_pro\Server\bin\Debug\Server.exe.config
+E:\Exam\Net_pro\Server\bin\Debug\Server.exe
+E:\Exam\Net_pro\Server\bin\Debug\Server.pdb
+E:\Exam\Net_pro\Server\obj\Debug\Server.csprojAssemblyReference.cache
+E:\Exam\Net_pro\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+E:\Exam\Net_pro\Server\obj\Debug\Server.exe
+E:\Exam\Net_pro\Server\obj\Debug\Server.pdb
